@@ -59,6 +59,9 @@ const PeopleList: React.FC<PeopleListProps> = ({people}) => {
           <Card
             title={person.name}
             description={`Altura: ${person.height}, Peso: ${person.mass}`}
+            onPress={() =>
+              navigation.navigate('Detail', {person: translatePerson(person)})
+            }
           />
         </TouchableOpacity>
       ))}
